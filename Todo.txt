@@ -1,0 +1,12 @@
+04/11 -19
+
+
+To do list:
+
+Lightbox ?  (VG)    Done ~ish make better!
+
+Styling (Button and Textarea)
+
+Better grid ?
+
+comments!
