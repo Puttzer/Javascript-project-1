@@ -18,6 +18,8 @@ form {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-bottom: 100px;
+  margin-top: 40px;
 }
 
 button {
@@ -47,4 +49,29 @@ button {
 #light-box img {
   margin: auto;
   display: block;
+}
+
+#loader {
+  display: none;
+  margin-top: 300px;
+}
+
+#loader svg {
+  display: block;
+  animation: flip 0.4s infinite;
+  width: 60px;
+  margin: auto;
+}
+
+#loader svg path {
+  fill: #fff;
+}
+
+@keyframes flip {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(180deg);
+  }
 }

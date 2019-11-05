@@ -8,6 +8,9 @@ document.querySelector("#close-btn").addEventListener("click", () => {
 //function that to be able to search for images through flickr api
 let searchfunction = e => {
   e.preventDefault();
+
+  if (e.keyCode !== 13) return;
+
   //get the value from input element
   let keyword = document.querySelector("input").value;
 
@@ -24,14 +27,20 @@ let searchfunction = e => {
 let fetchData = tag => {
   // linked url to said API, that is stored in the variable "url"
   //parameter "tags" is used in API as a defined area when keyword is added like say the word"space", the word itself is stored in the "tags" parameter and then placed in API which in return shows images related to that keyword
-  let url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=f0ba267d7ad25a32cb67fab3494fbc83&tags=${tag}&format=json&nojsoncallback=1`;
+  let url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=c27cda2b757d38fe7c15402c40c25b46&tags=${tag}&format=json&nojsoncallback=1`;
+
+  //show spinner
+  https: document.querySelector("#loader").style.display = "block";
 
   // fetch api which takes the varable "url" as its parameter
   fetch(url)
     //returns a promise that converts  the data to json format
     .then(res => res.json())
+
     //the return promise then convert parameter "res" into an obejct called "data"
     .then(data => {
+      document.querySelector("#loader").style.display = "none";
+
       //loop through the data object in the order below
       data.photos.photo.forEach(item => {
         // create a local variable "url" that fetches each image using the url-link below
@@ -69,4 +78,6 @@ let removeContent = () => {
 };
 
 //Run search function when user clicks on button or enter key
-form.addEventListener("click", searchfunction);
+//document.querySelector("button").addEventListener("click", searchfunction);
+
+form.addEventListener("keyup", searchfunction);

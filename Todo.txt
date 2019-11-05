@@ -10,3 +10,5 @@ Styling (Button and Textarea)
 Better grid ?
 
 comments!
+
+Link to flickr in lightbox? 
