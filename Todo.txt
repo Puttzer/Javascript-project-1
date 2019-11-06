@@ -3,12 +3,11 @@
 
 To do list:
 
-Lightbox ?  (VG)    Done ~ish make better!
+
 
 Styling (Button and Textarea)
 
-Better grid ?
 
-comments!
 
-Link to flickr in lightbox? 
+
+

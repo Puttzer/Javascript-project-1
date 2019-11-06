@@ -40,15 +40,20 @@ button {
 #light-box #close-btn {
   top: 0;
   right: 1rem;
-  font-size: 5rem;
+  font-size: 3rem;
   color: #fff;
   cursor: pointer;
   position: absolute;
 }
 
 #light-box img {
-  margin: auto;
   display: block;
+}
+
+#light-box div {
+  color: #fff;
+  margin: auto;
+  text-align: center;
 }
 
 #loader {

@@ -9,7 +9,7 @@ document.querySelector("#close-btn").addEventListener("click", () => {
 let searchfunction = e => {
   e.preventDefault();
 
-  if (e.keyCode !== 13) return;
+  // if (e.keyCode !== 13) return;
 
   //get the value from input element
   let keyword = document.querySelector("input").value;
@@ -25,9 +25,11 @@ let searchfunction = e => {
 // a function that fetches data from the API.
 
 let fetchData = tag => {
+  const per_page = document.querySelector("#per_page").value;
+
   // linked url to said API, that is stored in the variable "url"
   //parameter "tags" is used in API as a defined area when keyword is added like say the word"space", the word itself is stored in the "tags" parameter and then placed in API which in return shows images related to that keyword
-  let url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=c27cda2b757d38fe7c15402c40c25b46&tags=${tag}&format=json&nojsoncallback=1`;
+  let url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&per_page=${per_page}&api_key=28984d098e9946c2c42b87eac57a678b&text=${tag}&format=json&nojsoncallback=1`;
 
   //show spinner
   https: document.querySelector("#loader").style.display = "block";
@@ -43,6 +45,7 @@ let fetchData = tag => {
 
       //loop through the data object in the order below
       data.photos.photo.forEach(item => {
+        console.log(item);
         // create a local variable "url" that fetches each image using the url-link below
         // each placeholder is used to build the image that is received from  the server
         let url = `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`;
@@ -78,6 +81,5 @@ let removeContent = () => {
 };
 
 //Run search function when user clicks on button or enter key
-//document.querySelector("button").addEventListener("click", searchfunction);
 
-form.addEventListener("keyup", searchfunction);
+form.addEventListener("submit", searchfunction);
