@@ -45,7 +45,6 @@ let fetchData = tag => {
 
       //loop through the data object in the order below
       data.photos.photo.forEach(item => {
-        console.log(item);
         // create a local variable "url" that fetches each image using the url-link below
         // each placeholder is used to build the image that is received from  the server
         let url = `https://farm${item.farm}.staticflickr.com/${item.server}/${item.id}_${item.secret}.jpg`;
