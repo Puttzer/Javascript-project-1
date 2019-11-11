@@ -9,8 +9,6 @@ document.querySelector("#close-btn").addEventListener("click", () => {
 let searchfunction = e => {
   e.preventDefault();
 
-  // if (e.keyCode !== 13) return;
-
   //get the value from input element
   let keyword = document.querySelector("input").value;
 
@@ -23,12 +21,11 @@ let searchfunction = e => {
 };
 
 // a function that fetches data from the API.
-
 let fetchData = tag => {
   const per_page = document.querySelector("#per_page").value;
 
   // linked url to said API, that is stored in the variable "url"
-  //parameter "tags" is used in API as a defined area when keyword is added like say the word"space", the word itself is stored in the "tags" parameter and then placed in API which in return shows images related to that keyword
+  //parameter "tag" is used in API as a defined area when keyword is added like say the word "space", the word itself is stored in the "tags" parameter and then placed in API which in return shows images related to that keyword
   let url = ` https://www.flickr.com/services/rest/?method=flickr.photos.search&per_page=${per_page}&api_key=cdb09e2fe72ab4bffda634c1ef97a0ae&text=${tag}&format=json&nojsoncallback=1`;
 
   //show spinner

@@ -37,19 +37,6 @@ button {
   background: rgba(0, 0, 0, 0.8);
 }
 
-#output {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
-  width: 100%;
-}
-
-#output img {
-  border-radius: 5px;
-  margin: auto;
-  width: 100%;
-}
-
 #light-box #close-btn {
   top: 0;
   right: 1rem;
@@ -67,6 +54,19 @@ button {
   color: #fff;
   margin: auto;
   text-align: center;
+}
+
+#output {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+#output img {
+  border-radius: 5px;
+  margin: auto;
+  width: 100%;
 }
 
 #loader {
