@@ -37,6 +37,19 @@ button {
   background: rgba(0, 0, 0, 0.8);
 }
 
+#output {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  width: 100%;
+}
+
+#output img {
+  border-radius: 5px;
+  margin: auto;
+  width: 100%;
+}
+
 #light-box #close-btn {
   top: 0;
   right: 1rem;
@@ -78,5 +91,14 @@ button {
   }
   100% {
     transform: rotateZ(180deg);
+  }
+}
+
+@media screen (min-width 1024px) {
+  #output {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    width: 100%;
   }
 }

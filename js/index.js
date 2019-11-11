@@ -29,7 +29,7 @@ let fetchData = tag => {
 
   // linked url to said API, that is stored in the variable "url"
   //parameter "tags" is used in API as a defined area when keyword is added like say the word"space", the word itself is stored in the "tags" parameter and then placed in API which in return shows images related to that keyword
-  let url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&per_page=${per_page}&api_key=28984d098e9946c2c42b87eac57a678b&text=${tag}&format=json&nojsoncallback=1`;
+  let url = ` https://www.flickr.com/services/rest/?method=flickr.photos.search&per_page=${per_page}&api_key=cdb09e2fe72ab4bffda634c1ef97a0ae&text=${tag}&format=json&nojsoncallback=1`;
 
   //show spinner
   https: document.querySelector("#loader").style.display = "block";
