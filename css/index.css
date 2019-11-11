@@ -94,10 +94,10 @@ button {
   }
 }
 
-@media screen (min-width 1024px) {
+@media screen and (min-width: 1024px) {
   #output {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
     width: 100%;
   }
