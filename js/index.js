@@ -26,8 +26,7 @@ let fetchData = tag => {
 
   /* linked url to said API, that is stored in the variable "url"
   parameter "tag" is used in API as a defined area when keyword is added like say the word "space", the word itself is stored in the "tags" parameter and then placed in API which in return shows images related to that keyword */
-  
-  // OBSERVE!! <--- If the search function does not work get a new api link and set it up in the way it is below!!
+
   let url = `https://www.flickr.com/services/rest/?method=flickr.photos.search&api_key=4beff75b2b37350678be5b3751cbab22&text=${tag}&per_page=${per_page}&format=json&nojsoncallback=1`;
 
   //show spinner
